@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hussein Mohamed - Video Editor & Motion Designer Portfolio">
+    <title>Hussein Mohamed | Video Editor & Motion Designer</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <!-- Background Elements -->
+    <div class="bg-gradient bg-teal"></div>
+    <div class="bg-gradient bg-purple"></div>
+    <div class="grid-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="#" class="logo">HM<span class="dot">.</span></a>
+        <div class="nav-links">
+            <a href="#about" class="nav-link" data-i18n="nav_about">About</a>
+            <a href="#skills" class="nav-link" data-i18n="nav_skills">Skills</a>
+            <a href="#experience" class="nav-link" data-i18n="nav_experience">Experience</a>
+            <a href="#videos" class="nav-link" data-i18n="nav_videos">Videos</a>
+            <a href="#projects" class="nav-link" data-i18n="nav_freelance">Freelance</a>
+            <a href="#contact" class="nav-link btn-contact" data-i18n="nav_contact">Contact Me</a>
+            <button id="lang-toggle" class="lang-toggle-btn">عربي</button>
+        </div>
+        <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero section">
+            <div class="hero-content">
+                <span class="subtitle slide-in" data-i18n="hero_subtitle">Hello, I am</span>
+                <h1 class="title type-writer" data-i18n="hero_name">Hussein Mohamed</h1>
+                <h2 class="role text-gradient slide-in delay-1" data-i18n="hero_role">Video Editor & <br> Motion
+                    Designer</h2>
+                <p class="description slide-in delay-2" data-i18n="hero_desc">
+                    A passionate video editor and motion designer with a keen eye for detail and storytelling. I deliver
+                    visually compelling content that elevates brand image and engages audiences.
+                </p>
+                <div class="hero-cta slide-in delay-3">
+                    <a href="#projects" class="btn btn-primary" data-i18n="btn_work">View My Work</a>
+                    <a href="#experience" class="btn btn-secondary" data-i18n="btn_exp">My Experience</a>
+                </div>
+            </div>
+            <div class="hero-visual fade-in delay-2">
+                <div class="glass-card visual-card">
+                    <div class="card-content">
+                        <i class="fas fa-video fa-fw fa-2x"></i>
+                        <i class="fas fa-film fa-fw fa-2x"></i>
+                        <i class="fas fa-cube fa-fw fa-2x"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section fade-up">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="about_tag">About Me</span>
+                <h2 data-i18n="about_title">Bringing Stories to <span class="text-gradient">Life</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text glass-panel">
+                    <p data-i18n="about_text">I am eager to contribute to impactful projects and collaborate with
+                        creative teams to produce engaging multimedia.</p>
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <span data-i18n="about_loc_label">Location</span>
+                                <p data-i18n="about_loc_val">Mansoura, Egypt</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <span data-i18n="about_edu_label">Education</span>
+                                <p data-i18n="about_edu_val">Bachelor Degree in Computer Science</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-language"></i>
+                            <div>
+                                <span data-i18n="about_lang_label">Languages</span>
+                                <p data-i18n="about_lang_val">Arabic (Native), English (Fluent)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="extracurricular glass-panel">
+                    <h3 data-i18n="about_extra_title">Extracurricular Activities</h3>
+                    <div class="activity">
+                        <h4 data-i18n="about_extra1_role">Video Editing Instructor</h4>
+                        <p data-i18n="about_extra1_desc">Taught foundational and advanced video editing techniques to
+                            students.</p>
+                    </div>
+                    <div class="activity">
+                        <h4 data-i18n="about_extra2_role">Head of Media <span class="highlight">– Megateam</span></h4>
+                        <p data-i18n="about_extra2_desc">Led the media department, directed a team to deliver
+                            high-quality content on tight deadlines.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills section fade-up">
+            <div class="section-header center">
+                <span class="section-tag" data-i18n="skills_tag">Expertise</span>
+                <h2 data-i18n="skills_title">My <span class="text-gradient">Skills</span> Toolkit</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card glass-panel hover-glow">
+                    <div class="skill-icon"><i class="fas fa-film"></i></div>
+                    <h3 data-i18n="skill1_title">Video Editing</h3>
+                    <p data-i18n="skill1_desc">Adobe Premiere Pro, CapCut</p>
+                    <div class="skill-tags">
+                        <span>Premiere Pro</span>
+                        <span>CapCut</span>
+                        <span data-i18n="skill1_tag1">Performance Marketing</span>
+                    </div>
+                </div>
+                <div class="skill-card glass-panel hover-glow">
+                    <div class="skill-icon"><i class="fas fa-cube"></i></div>
+                    <h3 data-i18n="skill2_title">Motion Graphics</h3>
+                    <p data-i18n="skill2_desc">Adobe After Effects</p>
+                    <div class="skill-tags">
+                        <span>After Effects</span>
+                        <span data-i18n="skill2_tag1">2D Animation</span>
+                    </div>
+                </div>
+                <div class="skill-card glass-panel hover-glow">
+                    <div class="skill-icon"><i class="fas fa-pen-nib"></i></div>
+                    <h3 data-i18n="skill3_title">Graphic Design</h3>
+                    <p data-i18n="skill3_desc">Adobe Photoshop, Illustrator</p>
+                    <div class="skill-tags">
+                        <span>Photoshop</span>
+                        <span>Illustrator</span>
+                    </div>
+                </div>
+                <div class="skill-card glass-panel hover-glow">
+                    <div class="skill-icon"><i class="fas fa-users-cog"></i></div>
+                    <h3 data-i18n="skill4_title">Other Skills</h3>
+                    <p data-i18n="skill4_desc">Collaboration & Management</p>
+                    <div class="skill-tags">
+                        <span>Notion</span>
+                        <span>Frame.io</span>
+                        <span data-i18n="skill4_tag1">Leadership</span>
+                        <span data-i18n="skill4_tag2">Time Mgt.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience section fade-up">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="exp_tag">Career</span>
+                <h2 data-i18n="exp_title">Professional <span class="text-gradient">Experience</span></h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-panel">
+                        <div class="timeline-header">
+                            <h3 data-i18n="exp1_role">Video Editor</h3>
+                            <span class="company" data-i18n="exp1_company">Tasawk</span>
+                            <span class="date" data-i18n="exp1_date">Jan 2025 – Mar 2025</span>
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> <span data-i18n="exp1_loc">El
+                                    Mansoura, Egypt (On-site)</span></span>
+                        </div>
+                        <ul class="timeline-list">
+                            <li data-i18n="exp1_desc1">Edited promotional and advertising content tailored for digital
+                                platforms.</li>
+                            <li data-i18n="exp1_desc2">Worked closely with marketing teams to align visuals with brand
+                                strategy.</li>
+                            <li data-i18n="exp1_desc3">Specialized in video marketing and motion graphics for social
+                                media.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-panel">
+                        <div class="timeline-header">
+                            <h3 data-i18n="exp2_role">Video Editor</h3>
+                            <span class="company" data-i18n="exp2_company">EBTKRAT</span>
+                            <span class="date" data-i18n="exp2_date">Jan 2025 – Mar 2025</span>
+                            <span class="location"><i class="fas fa-globe"></i> <span
+                                    data-i18n="exp2_loc">Remote</span></span>
+                        </div>
+                        <ul class="timeline-list">
+                            <li data-i18n="exp2_desc1">Created engaging short-form video content for clients across
+                                diverse industries.</li>
+                            <li data-i18n="exp2_desc2">Executed fast-turnaround projects while maintaining high quality.
+                            </li>
+                            <li data-i18n="exp2_desc3">Focused on video editing and performance-driven video marketing.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Videos Section -->
+        <section id="videos" class="videos section fade-up">
+            <div class="section-header center">
+                <span class="section-tag" data-i18n="vid_tag">Showreel</span>
+                <h2 data-i18n="vid_title">My Best <span class="text-gradient">Videos</span></h2>
+            </div>
+
+            <div class="video-filters">
+                <button class="filter-btn active" data-filter="all" data-i18n="filter_all">All</button>
+                <button class="filter-btn" data-filter="promo" data-i18n="filter_promo">Promotional</button>
+                <button class="filter-btn" data-filter="motion" data-i18n="filter_motion">Motion Graphics</button>
+                <button class="filter-btn" data-filter="shorts" data-i18n="filter_shorts">Short-form</button>
+            </div>
+
+            <div class="videos-grid">
+                <div class="video-card glass-panel group" data-category="promo">
+                    <div class="video-container">
+                        <!-- User's Real Google Drive Video Player -->
+                        <iframe src="https://drive.google.com/file/d/1YcXmeuhQ5T48sygDjmgYUc1qUzdv1T_Q/preview"
+                            width="100%" height="100%" allow="autoplay" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <span class="category-tag" data-i18n="filter_promo">Promotional</span>
+                        <h3 data-i18n="vid1_title">Promotional Edit</h3>
+                    </div>
+                </div>
+                <div class="video-card glass-panel group" data-category="motion">
+                    <div class="video-container">
+                        <video controls
+                            poster="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=800">
+                            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                            Your browser does not support HTML video.
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <span class="category-tag" data-i18n="filter_motion">Motion Graphics</span>
+                        <h3 data-i18n="vid2_title">Motion Graphics Project</h3>
+                    </div>
+                </div>
+                <div class="video-card glass-panel group" data-category="shorts">
+                    <div class="video-container">
+                        <video controls
+                            poster="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=800">
+                            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                            Your browser does not support HTML video.
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <span class="category-tag" data-i18n="filter_shorts">Short-form</span>
+                        <h3 data-i18n="vid3_title">Social Media Reel</h3>
+                    </div>
+                </div>
+                <div class="video-card glass-panel group" data-category="promo">
+                    <div class="video-container">
+                        <video controls
+                            poster="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=800">
+                            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                            Your browser does not support HTML video.
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <span class="category-tag" data-i18n="filter_promo">Promotional</span>
+                        <h3 data-i18n="vid4_title">Corporate Video</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Freelance Projects Section -->
+        <section id="projects" class="projects section fade-up">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="proj_tag">Portfolio</span>
+                <h2 data-i18n="proj_title">Freelance <span class="text-gradient">Projects</span></h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card glass-panel group">
+                    <div class="project-overlay">
+                        <h3 data-i18n="proj1_title">Othman Building Construction Company</h3>
+                    </div>
+                    <div class="project-content">
+                        <p data-i18n="proj1_desc">Collaborated to produce high-quality promotional and corporate videos,
+                            significantly enhancing their brand image.</p>
+                    </div>
+                </div>
+                <div class="project-card glass-panel group">
+                    <div class="project-overlay">
+                        <h3 data-i18n="proj2_title">BLOCK & STEEL CO.</h3>
+                    </div>
+                    <div class="project-content">
+                        <p data-i18n="proj2_desc">Played a pivotal role in a major project, delivering visually engaging
+                            content that aligned with the company’s vision and goals.</p>
+                    </div>
+                </div>
+                <div class="project-card glass-panel group">
+                    <div class="project-overlay">
+                        <h3 data-i18n="proj3_title">SQUARE RYS</h3>
+                    </div>
+                    <div class="project-content">
+                        <p data-i18n="proj3_desc">Played a pivotal role in a major project, delivering visually engaging
+                            content that aligned with the company’s vision and goals.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section fade-up">
+            <div class="contact-box glass-panel text-center">
+                <h2 data-i18n="contact_title">Let's build something <span class="text-gradient">amazing</span> together
+                </h2>
+                <p data-i18n="contact_desc">I'm eager to contribute to impactful projects. Feel free to reach out for
+                    collaborations or opportunities.</p>
+                <div class="contact-methods">
+                    <a href="mailto:husseinmohamedjop157@gmail.com" class="contact-item">
+                        <div class="icon-wrapper"><i class="fas fa-envelope"></i></div>
+                        <span>husseinmohamedjop157@gmail.com</span>
+                    </a>
+                    <a href="https://wa.me/201012151893" target="_blank" class="contact-item whatsapp-btn">
+                        <div class="icon-wrapper"><i class="fab fa-whatsapp"></i></div>
+                        <span dir="ltr">+20 1012151893</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p data-i18n="footer_rights">&copy; 2026 Hussein Mohamed. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-behance"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="main.js"></script>
+</body>
+
+</html>
