@@ -142,7 +142,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// --- Bilingual Support (AR/EN) ---
+// --- English Translations ---
 const translations = {
     en: {
         nav_about: "About",
@@ -209,116 +209,8 @@ const translations = {
         contact_title: "Let's build something <span class=\"text-gradient\">amazing</span> together",
         contact_desc: "I'm eager to contribute to impactful projects. Feel free to reach out for collaborations or opportunities.",
         footer_rights: "© 2026 Hussein Mohamed. All Rights Reserved."
-    },
-    ar: {
-        nav_about: "من أنا",
-        nav_skills: "مهاراتي",
-        nav_testim: "آراء العملاء",
-        nav_videos: "الفيديوهات",
-        nav_freelance: "أعمالي المستقلة",
-        nav_contact: "تواصل معي",
-        hero_subtitle: "أهلاً بك، أنا",
-        hero_name: "حسين محمد",
-        hero_role: "مونتير & <br> مصمم موشن جرافيك",
-        hero_desc: "صانع محتوى شغوف بتعديل الفيديو وتصميم الموشن جرافيك، أتميز بلمسة فنية وقدرة على سرد القصص. أقدم محتوى مرئي جذاب يرفع من قيمة العلامة التجارية ويجذب الجمهور.",
-        btn_work: "شاهد أعمالي",
-        btn_testim: "آراء العملاء",
-        about_tag: "نبذة عني",
-        about_title: "نُضفي الحياة للـ<span class=\"text-gradient\">قصص</span>",
-        about_text: "أتطلع دائماً للمساهمة في مشاريع مؤثرة والتعاون مع فرق إبداعية لإنتاج وسائط متعددة جذابة ومميزة.",
-        about_loc_label: "الموقع",
-        about_loc_val: "المنصورة، مصر",
-        about_edu_label: "التعليم",
-        about_edu_val: "بكالوريوس علوم الحاسب",
-        about_lang_label: "اللغات",
-        about_lang_val: "العربية (الأم)، الإنجليزية (بطلاقة)",
-        about_extra_title: "الأنشطة الإضافية",
-        about_extra1_role: "مدرب تعديل فيديو (مونتاج)",
-        about_extra1_desc: "قمت بتدريس تقنيات تعديل الفيديو الأساسية والمتقدمة للطلاب.",
-        about_extra2_role: "مسؤول الميديا <span class=\"highlight\">– Megateam</span>",
-        about_extra2_desc: "أدرت قسم الميديا للعمل على مشاريع الإنتاج والتعديل بجودة عالية وفي أوقات زمنية ضيقة.",
-        skills_tag: "الخبرات",
-        skills_title: "أدواتي و<span class=\"text-gradient\">مهاراتي</span>",
-        skill1_title: "تعديل الفيديو (المونتاج)",
-        skill1_desc: "Adobe Premiere Pro, CapCut",
-        skill1_tag1: "التسويق بالأداء",
-        skill2_title: "موشن جرافيك",
-        skill2_desc: "Adobe After Effects",
-        skill2_tag1: "تحريك 2D",
-        skill3_title: "التصميم الجرافيكي",
-        skill3_desc: "Adobe Photoshop, Illustrator",
-        skill4_title: "مهارات أخرى",
-        skill4_desc: "التعاون والإدارة",
-        skill4_tag1: "القيادة",
-        skill4_tag2: "إدارة الوقت",
-        testim_tag: "آراء العملاء",
-        testim_title: "ماذا يقول <span class=\"text-gradient\">عملائي</span>",
-        testim1_text: "حسين مونتير موهوب ومحترف جداً. قام بتسليم المشروع في الوقت المحدد وتجاوز كل توقعاتنا بشكل مبهر.",
-        testim1_author: "شركة عثمان للبناء",
-        testim1_company: "عميل مميز",
-        testim2_text: "العمل مع حسين كان تجربة سلسة ورائعة. مهاراته في الموشن جرافيك أضفت حياة وتأثيراً قوياً لعلامتنا التجارية.",
-        testim2_author: "شركة بلوك & ستيل",
-        testim2_company: "عميل مميز",
-        vid_tag: "معرض الأعمال",
-        vid_title: "أفضل <span class=\"text-gradient\">مقاطعي</span>",
-        filter_all: "<i class=\"fas fa-th-large\"></i> الكل",
-        filter_realestate: "<i class=\"fas fa-building\"></i> عقارات",
-        filter_food: "<i class=\"fas fa-utensils\"></i> مطاعم وبروموهات",
-        filter_events: "<i class=\"fas fa-star\"></i> إيفنتات وتغطيات",
-        filter_youtube: "<i class=\"fab fa-youtube\"></i> يوتيوب ومحتوى طويل",
-        filter_motion: "<i class=\"fas fa-cube\"></i> موشن جرافيك",
-        vid1_title: "برومو عقارات",
-        vid2_title: "إعلان مطعم",
-        vid3_title: "تغطية إيفنت",
-        vid4_title: "محتوى يوتيوب",
-        vid5_title: "موشن جرافيك",
-        contact_title: "دعنا نبني شيئاً <span class=\"text-gradient\">رائعاً</span> معاً",
-        contact_desc: "أتطلع دائماً للمساهمة في مشاريع ملهمة، لا تتردد في التواصل معي للتعاون والاستفسارات.",
-        footer_rights: "© 2026 حسين محمد. جميع الحقوق محفوظة."
     }
 };
-
-let currentLang = 'en';
-const langToggleBtn = document.getElementById('lang-toggle');
-
-if (langToggleBtn) {
-    langToggleBtn.addEventListener('click', () => {
-        // Toggle language
-        currentLang = currentLang === 'en' ? 'ar' : 'en';
-
-        // Update document dir and lang
-        document.documentElement.lang = currentLang;
-        document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
-
-        // Update button text
-        langToggleBtn.textContent = currentLang === 'en' ? 'عربي' : 'English';
-
-        // Update all translation strings based on data-i18n attributes
-        const elementsToTranslate = document.querySelectorAll('[data-i18n]');
-        elementsToTranslate.forEach(element => {
-            const key = element.getAttribute('data-i18n');
-            if (translations[currentLang][key]) {
-                element.innerHTML = translations[currentLang][key];
-            }
-        });
-
-        // Reset type-writer animation for Hero Name to match language
-        const nameKey = 'hero_name';
-        if (typeWriterElement && translations[currentLang][nameKey]) {
-            typeWriterElement.textContent = '';
-            const newText = translations[currentLang][nameKey];
-            let k = 0;
-            const newTypeWriter = () => {
-                if (k < newText.length) {
-                    typeWriterElement.textContent += newText.charAt(k);
-                    k++;
-                    setTimeout(newTypeWriter, 100);
-                }
-            };
-            setTimeout(newTypeWriter, 200);
-        }
-    });
-}
 
 // --- Video Slider Logic ---
 (function () {
