@@ -99,6 +99,24 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Mobile Menu Logic
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const navLinksContainer = document.querySelector('.nav-links');
+
+if (mobileMenuBtn && navLinksContainer) {
+    mobileMenuBtn.addEventListener('click', () => {
+        navLinksContainer.classList.toggle('active');
+        const icon = mobileMenuBtn.querySelector('i');
+        if (navLinksContainer.classList.contains('active')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+        } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+    });
+}
+
 // Smooth scrolling for anchor links (if browser doesn't support CSS smooth-scroll)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -113,8 +131,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 behavior: 'smooth'
             });
 
-            // Close mobile menu if open (placeholder for logic)
-            // if(mobileMenu.classList.contains('active')) closeMenu();
+            // Close mobile menu if open
+            if (navLinksContainer && navLinksContainer.classList.contains('active')) {
+                navLinksContainer.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
         }
     });
 });
@@ -124,7 +147,7 @@ const translations = {
     en: {
         nav_about: "About",
         nav_skills: "Skills",
-        nav_experience: "Experience",
+        nav_testim: "Reviews",
         nav_videos: "Videos",
         nav_freelance: "Freelance",
         nav_contact: "Contact Me",
@@ -133,7 +156,7 @@ const translations = {
         hero_role: "Video Editor & <br> Motion Designer",
         hero_desc: "A passionate video editor and motion designer with a keen eye for detail and storytelling. I deliver visually compelling content that elevates brand image and engages audiences.",
         btn_work: "View My Work",
-        btn_exp: "My Experience",
+        btn_testim: "Client Reviews",
         about_tag: "About Me",
         about_title: "Bringing Stories to <span class=\"text-gradient\">Life</span>",
         about_text: "I am eager to contribute to impactful projects and collaborate with creative teams to produce engaging multimedia.",
@@ -162,40 +185,27 @@ const translations = {
         skill4_desc: "Collaboration & Management",
         skill4_tag1: "Leadership",
         skill4_tag2: "Time Mgt.",
-        exp_tag: "Career",
-        exp_title: "Professional <span class=\"text-gradient\">Experience</span>",
-        exp1_role: "Video Editor",
-        exp1_company: "Tasawk",
-        exp1_date: "Jan 2025 – Mar 2025",
-        exp1_loc: "El Mansoura, Egypt (On-site)",
-        exp1_desc1: "Edited promotional and advertising content tailored for digital platforms.",
-        exp1_desc2: "Worked closely with marketing teams to align visuals with brand strategy.",
-        exp1_desc3: "Specialized in video marketing and motion graphics for social media.",
-        exp2_role: "Video Editor",
-        exp2_company: "EBTKRAT",
-        exp2_date: "Jan 2025 – Mar 2025",
-        exp2_loc: "Remote",
-        exp2_desc1: "Created engaging short-form video content for clients across diverse industries.",
-        exp2_desc2: "Executed fast-turnaround projects while maintaining high quality.",
-        exp2_desc3: "Focused on video editing and performance-driven video marketing.",
+        testim_tag: "Client Reviews",
+        testim_title: "What <span class=\"text-gradient\">Clients</span> Say",
+        testim1_text: "Hussein is an incredibly talented video editor. He delivered the project on time and exceeded our expectations in every way.",
+        testim1_author: "Othman Construction",
+        testim1_company: "Valued Client",
+        testim2_text: "Working with Hussein was a seamless experience. His motion graphics skills brought our brand vision to life brilliantly.",
+        testim2_author: "Block & Steel Co.",
+        testim2_company: "Valued Client",
         vid_tag: "Showreel",
         vid_title: "My Best <span class=\"text-gradient\">Videos</span>",
-        filter_all: "All",
-        filter_promo: "Promotional",
-        filter_motion: "Motion Graphics",
-        filter_shorts: "Short-form",
-        vid1_title: "Promotional Edit",
-        vid2_title: "Motion Graphics Project",
-        vid3_title: "Social Media Reel",
-        vid4_title: "Corporate Video",
-        proj_tag: "Portfolio",
-        proj_title: "Freelance <span class=\"text-gradient\">Projects</span>",
-        proj1_title: "Othman Building Construction Company",
-        proj1_desc: "Collaborated to produce high-quality promotional and corporate videos, significantly enhancing their brand image.",
-        proj2_title: "BLOCK & STEEL CO.",
-        proj2_desc: "Played a pivotal role in a major project, delivering visually engaging content that aligned with the company’s vision and goals.",
-        proj3_title: "SQUARE RYS",
-        proj3_desc: "Played a pivotal role in a major project, delivering visually engaging content that aligned with the company’s vision and goals.",
+        filter_all: "<i class=\"fas fa-th-large\"></i> All",
+        filter_realestate: "<i class=\"fas fa-building\"></i> Real Estate",
+        filter_food: "<i class=\"fas fa-utensils\"></i> Food & Restaurants",
+        filter_events: "<i class=\"fas fa-star\"></i> Events & Highlights",
+        filter_youtube: "<i class=\"fab fa-youtube\"></i> YouTube Content",
+        filter_motion: "<i class=\"fas fa-cube\"></i> Motion Graphics",
+        vid1_title: "Real Estate Promo",
+        vid2_title: "Restaurant Ad",
+        vid3_title: "Event Highlight",
+        vid4_title: "YouTube Video",
+        vid5_title: "Motion Graphics",
         contact_title: "Let's build something <span class=\"text-gradient\">amazing</span> together",
         contact_desc: "I'm eager to contribute to impactful projects. Feel free to reach out for collaborations or opportunities.",
         footer_rights: "© 2026 Hussein Mohamed. All Rights Reserved."
@@ -203,7 +213,7 @@ const translations = {
     ar: {
         nav_about: "من أنا",
         nav_skills: "مهاراتي",
-        nav_experience: "خبراتي",
+        nav_testim: "آراء العملاء",
         nav_videos: "الفيديوهات",
         nav_freelance: "أعمالي المستقلة",
         nav_contact: "تواصل معي",
@@ -212,7 +222,7 @@ const translations = {
         hero_role: "مونتير & <br> مصمم موشن جرافيك",
         hero_desc: "صانع محتوى شغوف بتعديل الفيديو وتصميم الموشن جرافيك، أتميز بلمسة فنية وقدرة على سرد القصص. أقدم محتوى مرئي جذاب يرفع من قيمة العلامة التجارية ويجذب الجمهور.",
         btn_work: "شاهد أعمالي",
-        btn_exp: "خبراتي السابقة",
+        btn_testim: "آراء العملاء",
         about_tag: "نبذة عني",
         about_title: "نُضفي الحياة للـ<span class=\"text-gradient\">قصص</span>",
         about_text: "أتطلع دائماً للمساهمة في مشاريع مؤثرة والتعاون مع فرق إبداعية لإنتاج وسائط متعددة جذابة ومميزة.",
@@ -241,40 +251,27 @@ const translations = {
         skill4_desc: "التعاون والإدارة",
         skill4_tag1: "القيادة",
         skill4_tag2: "إدارة الوقت",
-        exp_tag: "المسيرة المهنية",
-        exp_title: "الخبرات <span class=\"text-gradient\">العملية</span>",
-        exp1_role: "مونتير",
-        exp1_company: "تصوق (Tasawk)",
-        exp1_date: "يناير 2025 – مارس 2025",
-        exp1_loc: "المنصورة، مصر (بالمقر)",
-        exp1_desc1: "تحرير محتوى دعائي وإعلاني مخصص للمنصات الرقمية.",
-        exp1_desc2: "العمل عن كثب مع فرق التسويق لمواءمة الجانب المرئي مع استراتيجية العمل.",
-        exp1_desc3: "متخصص في تسويق الفيديوهات والموشن جرافيك لوسائل التواصل الاجتماعي.",
-        exp2_role: "مونتير",
-        exp2_company: "ابتكارات (EBTKRAT)",
-        exp2_date: "يناير 2025 – مارس 2025",
-        exp2_loc: "عن بُعد",
-        exp2_desc1: "إنشاء محتوى فيديو قصير وجذاب للعملاء في قطاعات مختلفة.",
-        exp2_desc2: "تنفيذ مشاريع سريعة الإنجاز مع الحفاظ على أعلى مستويات الجودة.",
-        exp2_desc3: "التركيز على تعديل الفيديو والتسويق بالفيديو المبني على الأداء.",
+        testim_tag: "آراء العملاء",
+        testim_title: "ماذا يقول <span class=\"text-gradient\">عملائي</span>",
+        testim1_text: "حسين مونتير موهوب ومحترف جداً. قام بتسليم المشروع في الوقت المحدد وتجاوز كل توقعاتنا بشكل مبهر.",
+        testim1_author: "شركة عثمان للبناء",
+        testim1_company: "عميل مميز",
+        testim2_text: "العمل مع حسين كان تجربة سلسة ورائعة. مهاراته في الموشن جرافيك أضفت حياة وتأثيراً قوياً لعلامتنا التجارية.",
+        testim2_author: "شركة بلوك & ستيل",
+        testim2_company: "عميل مميز",
         vid_tag: "معرض الأعمال",
         vid_title: "أفضل <span class=\"text-gradient\">مقاطعي</span>",
-        filter_all: "الكل",
-        filter_promo: "ترويجي / دعائي",
-        filter_motion: "موشن جرافيك",
-        filter_shorts: "مقاطع قصيرة",
-        vid1_title: "تعديل فيديو ترويجي",
-        vid2_title: "مشروع موشن جرافيك",
-        vid3_title: "ريلز للسوشيال ميديا",
-        vid4_title: "فيديو للشركات",
-        proj_tag: "بورتفوليو",
-        proj_title: "مشاريع <span class=\"text-gradient\">مستقلة</span>",
-        proj1_title: "شركة عثمان للبناء والمقاولات",
-        proj1_desc: "تعاونت لإنتاج فيديوهات ترويجية للشركة ذات جودة عالية مما أدى لتعزيز صورة علامتهم التجارية بشكل كبير.",
-        proj2_title: "شركة بلوك & ستيل",
-        proj2_desc: "لعبت دوراً أساسياً في مشروع ضخم عبر تقديم محتوى مرئي جذاب يتماشى مع رؤية وأهداف الشركة.",
-        proj3_title: "سكوير ريس (SQUARE RYS)",
-        proj3_desc: "لعبت دوراً أساسياً في مشروع ضخم عبر تقديم محتوى مرئي جذاب يتماشى مع رؤية وأهداف الشركة.",
+        filter_all: "<i class=\"fas fa-th-large\"></i> الكل",
+        filter_realestate: "<i class=\"fas fa-building\"></i> عقارات",
+        filter_food: "<i class=\"fas fa-utensils\"></i> مطاعم وبروموهات",
+        filter_events: "<i class=\"fas fa-star\"></i> إيفنتات وتغطيات",
+        filter_youtube: "<i class=\"fab fa-youtube\"></i> يوتيوب ومحتوى طويل",
+        filter_motion: "<i class=\"fas fa-cube\"></i> موشن جرافيك",
+        vid1_title: "برومو عقارات",
+        vid2_title: "إعلان مطعم",
+        vid3_title: "تغطية إيفنت",
+        vid4_title: "محتوى يوتيوب",
+        vid5_title: "موشن جرافيك",
         contact_title: "دعنا نبني شيئاً <span class=\"text-gradient\">رائعاً</span> معاً",
         contact_desc: "أتطلع دائماً للمساهمة في مشاريع ملهمة، لا تتردد في التواصل معي للتعاون والاستفسارات.",
         footer_rights: "© 2026 حسين محمد. جميع الحقوق محفوظة."
@@ -323,26 +320,79 @@ if (langToggleBtn) {
     });
 }
 
-// --- Video Filtering Logic ---
-const filterButtons = document.querySelectorAll('.filter-btn');
-const videoCards = document.querySelectorAll('.video-card');
+// --- Video Slider Logic ---
+(function () {
+    const track = document.getElementById('videoSliderTrack');
+    const slides = document.querySelectorAll('.video-slide');
+    const prevBtn = document.getElementById('sliderPrev');
+    const nextBtn = document.getElementById('sliderNext');
+    const dots = document.querySelectorAll('.slider-dot');
 
-filterButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-        // Remove active class from all buttons
-        filterButtons.forEach(b => b.classList.remove('active'));
-        // Add active class to clicked button
-        btn.classList.add('active');
+    if (!track || slides.length === 0) return;
 
-        const filterValue = btn.getAttribute('data-filter');
+    let currentIndex = 0;
+    const totalSlides = slides.length;
 
-        videoCards.forEach(card => {
-            if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-                card.classList.remove('hide');
-                // Optional: you can add a small animation class here
-            } else {
-                card.classList.add('hide');
-            }
+    function goToSlide(index) {
+        // Wrap around
+        if (index < 0) index = totalSlides - 1;
+        if (index >= totalSlides) index = 0;
+        currentIndex = index;
+
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+        // Update dots
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentIndex);
+        });
+    }
+
+    if (prevBtn) prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
+    if (nextBtn) nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+
+    // Dot click
+    dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+            const target = parseInt(dot.getAttribute('data-slide'), 10);
+            goToSlide(target);
         });
     });
-});
+
+    // Touch / Swipe support
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    track.addEventListener('touchstart', e => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    track.addEventListener('touchend', e => {
+        touchEndX = e.changedTouches[0].screenX;
+        const diff = touchStartX - touchEndX;
+        if (Math.abs(diff) > 50) {
+            goToSlide(diff > 0 ? currentIndex + 1 : currentIndex - 1);
+        }
+    }, { passive: true });
+
+    // Auto-play every 5 seconds
+    let autoPlay = setInterval(() => goToSlide(currentIndex + 1), 5000);
+
+    // Pause on hover
+    const wrapper = document.querySelector('.video-slider-wrapper');
+    if (wrapper) {
+        wrapper.addEventListener('mouseenter', () => clearInterval(autoPlay));
+        wrapper.addEventListener('mouseleave', () => {
+            autoPlay = setInterval(() => goToSlide(currentIndex + 1), 5000);
+        });
+
+        // Mouse wheel scroll support
+        let wheelLocked = false;
+        wrapper.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            if (wheelLocked) return;
+            wheelLocked = true;
+            goToSlide(e.deltaY > 0 ? currentIndex + 1 : currentIndex - 1);
+            setTimeout(() => { wheelLocked = false; }, 700);
+        }, { passive: false });
+    }
+})();

@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Hussein Mohamed - Video Editor & Motion Designer Portfolio">
     <title>Hussein Mohamed | Video Editor & Motion Designer</title>
-    <!-- Google Fonts -->
+    <!-- Montserrat Font (Arabic + English) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Montserrat+Alternates:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -32,11 +34,10 @@
     <nav class="navbar">
         <a href="#" class="logo">HM<span class="dot">.</span></a>
         <div class="nav-links">
-            <a href="#about" class="nav-link" data-i18n="nav_about">About</a>
             <a href="#skills" class="nav-link" data-i18n="nav_skills">Skills</a>
-            <a href="#experience" class="nav-link" data-i18n="nav_experience">Experience</a>
             <a href="#videos" class="nav-link" data-i18n="nav_videos">Videos</a>
-            <a href="#projects" class="nav-link" data-i18n="nav_freelance">Freelance</a>
+            <a href="#testimonials" class="nav-link" data-i18n="nav_testim">Reviews</a>
+            <a href="#about" class="nav-link" data-i18n="nav_about">About</a>
             <a href="#contact" class="nav-link btn-contact" data-i18n="nav_contact">Contact Me</a>
             <button id="lang-toggle" class="lang-toggle-btn">عربي</button>
         </div>
@@ -56,66 +57,15 @@
                     visually compelling content that elevates brand image and engages audiences.
                 </p>
                 <div class="hero-cta slide-in delay-3">
-                    <a href="#projects" class="btn btn-primary" data-i18n="btn_work">View My Work</a>
-                    <a href="#experience" class="btn btn-secondary" data-i18n="btn_exp">My Experience</a>
+                    <a href="#videos" class="btn btn-primary" data-i18n="btn_work">View My Work</a>
+                    <a href="#testimonials" class="btn btn-secondary" data-i18n="btn_testim">Client Reviews</a>
                 </div>
             </div>
             <div class="hero-visual fade-in delay-2">
-                <div class="glass-card visual-card">
-                    <div class="card-content">
-                        <i class="fas fa-video fa-fw fa-2x"></i>
-                        <i class="fas fa-film fa-fw fa-2x"></i>
-                        <i class="fas fa-cube fa-fw fa-2x"></i>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="about section fade-up">
-            <div class="section-header">
-                <span class="section-tag" data-i18n="about_tag">About Me</span>
-                <h2 data-i18n="about_title">Bringing Stories to <span class="text-gradient">Life</span></h2>
-            </div>
-            <div class="about-grid">
-                <div class="about-text glass-panel">
-                    <p data-i18n="about_text">I am eager to contribute to impactful projects and collaborate with
-                        creative teams to produce engaging multimedia.</p>
-                    <div class="about-details">
-                        <div class="detail-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <span data-i18n="about_loc_label">Location</span>
-                                <p data-i18n="about_loc_val">Mansoura, Egypt</p>
-                            </div>
-                        </div>
-                        <div class="detail-item">
-                            <i class="fas fa-graduation-cap"></i>
-                            <div>
-                                <span data-i18n="about_edu_label">Education</span>
-                                <p data-i18n="about_edu_val">Bachelor Degree in Computer Science</p>
-                            </div>
-                        </div>
-                        <div class="detail-item">
-                            <i class="fas fa-language"></i>
-                            <div>
-                                <span data-i18n="about_lang_label">Languages</span>
-                                <p data-i18n="about_lang_val">Arabic (Native), English (Fluent)</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="extracurricular glass-panel">
-                    <h3 data-i18n="about_extra_title">Extracurricular Activities</h3>
-                    <div class="activity">
-                        <h4 data-i18n="about_extra1_role">Video Editing Instructor</h4>
-                        <p data-i18n="about_extra1_desc">Taught foundational and advanced video editing techniques to
-                            students.</p>
-                    </div>
-                    <div class="activity">
-                        <h4 data-i18n="about_extra2_role">Head of Media <span class="highlight">– Megateam</span></h4>
-                        <p data-i18n="about_extra2_desc">Led the media department, directed a team to deliver
-                            high-quality content on tight deadlines.</p>
+                <div class="glass-card visual-card" style="padding: 0;">
+                    <div class="hero-image-wrapper">
+                        <img src="profile.png" alt="Hussein Mohamed Character" class="hero-image">
+                        <div class="hero-image-overlay"></div>
                     </div>
                 </div>
             </div>
@@ -170,56 +120,6 @@
             </div>
         </section>
 
-        <!-- Experience Section -->
-        <section id="experience" class="experience section fade-up">
-            <div class="section-header">
-                <span class="section-tag" data-i18n="exp_tag">Career</span>
-                <h2 data-i18n="exp_title">Professional <span class="text-gradient">Experience</span></h2>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-panel">
-                        <div class="timeline-header">
-                            <h3 data-i18n="exp1_role">Video Editor</h3>
-                            <span class="company" data-i18n="exp1_company">Tasawk</span>
-                            <span class="date" data-i18n="exp1_date">Jan 2025 – Mar 2025</span>
-                            <span class="location"><i class="fas fa-map-marker-alt"></i> <span data-i18n="exp1_loc">El
-                                    Mansoura, Egypt (On-site)</span></span>
-                        </div>
-                        <ul class="timeline-list">
-                            <li data-i18n="exp1_desc1">Edited promotional and advertising content tailored for digital
-                                platforms.</li>
-                            <li data-i18n="exp1_desc2">Worked closely with marketing teams to align visuals with brand
-                                strategy.</li>
-                            <li data-i18n="exp1_desc3">Specialized in video marketing and motion graphics for social
-                                media.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-panel">
-                        <div class="timeline-header">
-                            <h3 data-i18n="exp2_role">Video Editor</h3>
-                            <span class="company" data-i18n="exp2_company">EBTKRAT</span>
-                            <span class="date" data-i18n="exp2_date">Jan 2025 – Mar 2025</span>
-                            <span class="location"><i class="fas fa-globe"></i> <span
-                                    data-i18n="exp2_loc">Remote</span></span>
-                        </div>
-                        <ul class="timeline-list">
-                            <li data-i18n="exp2_desc1">Created engaging short-form video content for clients across
-                                diverse industries.</li>
-                            <li data-i18n="exp2_desc2">Executed fast-turnaround projects while maintaining high quality.
-                            </li>
-                            <li data-i18n="exp2_desc3">Focused on video editing and performance-driven video marketing.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Videos Section -->
         <section id="videos" class="videos section fade-up">
             <div class="section-header center">
@@ -227,99 +127,192 @@
                 <h2 data-i18n="vid_title">My Best <span class="text-gradient">Videos</span></h2>
             </div>
 
-            <div class="video-filters">
-                <button class="filter-btn active" data-filter="all" data-i18n="filter_all">All</button>
-                <button class="filter-btn" data-filter="promo" data-i18n="filter_promo">Promotional</button>
-                <button class="filter-btn" data-filter="motion" data-i18n="filter_motion">Motion Graphics</button>
-                <button class="filter-btn" data-filter="shorts" data-i18n="filter_shorts">Short-form</button>
+            <!-- Video Slider -->
+            <div class="video-slider-wrapper">
+                <button class="slider-btn slider-prev" id="sliderPrev" aria-label="Previous">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <div class="video-slider-viewport">
+                    <div class="video-slider-track" id="videoSliderTrack">
+
+                        <!-- Slide 1: Motion Graphics -->
+                        <div class="video-slide">
+                            <div class="video-card glass-panel">
+                                <div class="video-container">
+                                    <iframe
+                                        src="https://drive.google.com/file/d/1YcXmeuhQ5T48sygDjmgYUc1qUzdv1T_Q/preview"
+                                        width="100%" height="100%" allow="autoplay" allowfullscreen></iframe>
+                                </div>
+                                <div class="video-info">
+                                    <span class="category-tag"><i class="fas fa-cube"></i> <span
+                                            data-i18n="filter_motion">Motion Graphics</span></span>
+                                    <h3 data-i18n="vid5_title">Motion Graphics</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2: Real Estate -->
+                        <div class="video-slide">
+                            <div class="video-card glass-panel">
+                                <div class="video-container">
+                                    <iframe
+                                        src="https://drive.google.com/file/d/1kHTwfeSLgKG_TOdEBmC8sHs1UVyuf88t/preview"
+                                        width="100%" height="100%" allow="autoplay" allowfullscreen></iframe>
+                                </div>
+                                <div class="video-info">
+                                    <span class="category-tag"><i class="fas fa-building"></i> <span
+                                            data-i18n="filter_realestate">Real Estate</span></span>
+                                    <h3 data-i18n="vid1_title">Real Estate Promo</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3: Cafe -->
+                        <div class="video-slide">
+                            <div class="video-card glass-panel">
+                                <div class="video-container">
+                                    <iframe
+                                        src="https://drive.google.com/file/d/1LbjOp8BLYtnQdg6ghc2Gs6HAV1n0kfaC/preview"
+                                        width="100%" height="100%" allow="autoplay" allowfullscreen></iframe>
+                                </div>
+                                <div class="video-info">
+                                    <span class="category-tag"><i class="fas fa-coffee"></i> <span
+                                            data-i18n="filter_food">Food & Restaurants</span></span>
+                                    <h3 data-i18n="vid2_title">Cafe Ad</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 4: Reels -->
+                        <div class="video-slide">
+                            <div class="video-card glass-panel">
+                                <div class="video-container">
+                                    <iframe
+                                        src="https://drive.google.com/file/d/1AJOJQo5IfPGGVZp7OcmNCXk5EPYV_fbH/preview"
+                                        width="100%" height="100%" allow="autoplay" allowfullscreen></iframe>
+                                </div>
+                                <div class="video-info">
+                                    <span class="category-tag"><i class="fas fa-film"></i> <span
+                                            data-i18n="filter_events">Reels</span></span>
+                                    <h3 data-i18n="vid3_title">Reels</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 5: YouTube Content -->
+                        <div class="video-slide">
+                            <div class="video-card glass-panel">
+                                <div class="video-container">
+                                    <iframe
+                                        src="https://drive.google.com/file/d/1-ERacV6U6xaUAGD1TaN84p59_Bfzhbk0/preview"
+                                        width="100%" height="100%" allow="autoplay" allowfullscreen></iframe>
+                                </div>
+                                <div class="video-info">
+                                    <span class="category-tag"><i class="fab fa-youtube"></i> <span
+                                            data-i18n="filter_youtube">YouTube Content</span></span>
+                                    <h3 data-i18n="vid4_title">YouTube Video</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <button class="slider-btn slider-next" id="sliderNext" aria-label="Next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
 
-            <div class="videos-grid">
-                <div class="video-card glass-panel group" data-category="promo">
-                    <div class="video-container">
-                        <!-- User's Real Google Drive Video Player -->
-                        <iframe src="https://drive.google.com/file/d/1YcXmeuhQ5T48sygDjmgYUc1qUzdv1T_Q/preview"
-                            width="100%" height="100%" allow="autoplay" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <span class="category-tag" data-i18n="filter_promo">Promotional</span>
-                        <h3 data-i18n="vid1_title">Promotional Edit</h3>
-                    </div>
-                </div>
-                <div class="video-card glass-panel group" data-category="motion">
-                    <div class="video-container">
-                        <video controls
-                            poster="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=800">
-                            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-                            Your browser does not support HTML video.
-                        </video>
-                    </div>
-                    <div class="video-info">
-                        <span class="category-tag" data-i18n="filter_motion">Motion Graphics</span>
-                        <h3 data-i18n="vid2_title">Motion Graphics Project</h3>
-                    </div>
-                </div>
-                <div class="video-card glass-panel group" data-category="shorts">
-                    <div class="video-container">
-                        <video controls
-                            poster="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=800">
-                            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-                            Your browser does not support HTML video.
-                        </video>
-                    </div>
-                    <div class="video-info">
-                        <span class="category-tag" data-i18n="filter_shorts">Short-form</span>
-                        <h3 data-i18n="vid3_title">Social Media Reel</h3>
+            <!-- Slider Dots -->
+            <div class="slider-dots" id="sliderDots">
+                <button class="slider-dot active" data-slide="0"></button>
+                <button class="slider-dot" data-slide="1"></button>
+                <button class="slider-dot" data-slide="2"></button>
+                <button class="slider-dot" data-slide="3"></button>
+                <button class="slider-dot" data-slide="4"></button>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials section fade-up">
+            <div class="section-header center">
+                <span class="section-tag" data-i18n="testim_tag">Testimonials</span>
+                <h2 data-i18n="testim_title">What <span class="text-gradient">Clients</span> Say</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testim-card glass-panel hover-glow">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p class="testim-text" data-i18n="testim1_text">Hussein is an incredibly talented video editor. He
+                        delivered the project on time and exceeded our expectations in every way.</p>
+                    <div class="client-info">
+                        <div class="client-avatar"><i class="fas fa-user text-gradient"></i></div>
+                        <div>
+                            <h4 data-i18n="testim1_author">Othman Construction</h4>
+                            <span data-i18n="testim1_company">Valued Client</span>
+                        </div>
                     </div>
                 </div>
-                <div class="video-card glass-panel group" data-category="promo">
-                    <div class="video-container">
-                        <video controls
-                            poster="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=800">
-                            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-                            Your browser does not support HTML video.
-                        </video>
-                    </div>
-                    <div class="video-info">
-                        <span class="category-tag" data-i18n="filter_promo">Promotional</span>
-                        <h3 data-i18n="vid4_title">Corporate Video</h3>
+                <div class="testim-card glass-panel hover-glow">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p class="testim-text" data-i18n="testim2_text">Working with Hussein was a seamless experience. His
+                        motion graphics skills brought our brand vision to life brilliantly.</p>
+                    <div class="client-info">
+                        <div class="client-avatar"><i class="fas fa-user text-gradient"></i></div>
+                        <div>
+                            <h4 data-i18n="testim2_author">Block & Steel Co.</h4>
+                            <span data-i18n="testim2_company">Valued Client</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Freelance Projects Section -->
-        <section id="projects" class="projects section fade-up">
+        <!-- About Section -->
+        <section id="about" class="about section fade-up">
             <div class="section-header">
-                <span class="section-tag" data-i18n="proj_tag">Portfolio</span>
-                <h2 data-i18n="proj_title">Freelance <span class="text-gradient">Projects</span></h2>
+                <span class="section-tag" data-i18n="about_tag">About Me</span>
+                <h2 data-i18n="about_title">Bringing Stories to <span class="text-gradient">Life</span></h2>
             </div>
-            <div class="projects-grid">
-                <div class="project-card glass-panel group">
-                    <div class="project-overlay">
-                        <h3 data-i18n="proj1_title">Othman Building Construction Company</h3>
-                    </div>
-                    <div class="project-content">
-                        <p data-i18n="proj1_desc">Collaborated to produce high-quality promotional and corporate videos,
-                            significantly enhancing their brand image.</p>
+            <div class="about-grid">
+                <div class="about-text glass-panel">
+                    <p data-i18n="about_text">I am eager to contribute to impactful projects and collaborate with
+                        creative teams to produce engaging multimedia.</p>
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <span data-i18n="about_loc_label">Location</span>
+                                <p data-i18n="about_loc_val">Mansoura, Egypt</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <span data-i18n="about_edu_label">Education</span>
+                                <p data-i18n="about_edu_val">Bachelor Degree in Computer Science</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-language"></i>
+                            <div>
+                                <span data-i18n="about_lang_label">Languages</span>
+                                <p data-i18n="about_lang_val">Arabic (Native), English (Fluent)</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="project-card glass-panel group">
-                    <div class="project-overlay">
-                        <h3 data-i18n="proj2_title">BLOCK & STEEL CO.</h3>
+                <div class="extracurricular glass-panel">
+                    <h3 data-i18n="about_extra_title">Extracurricular Activities</h3>
+                    <div class="activity">
+                        <h4 data-i18n="about_extra1_role">Video Editing Instructor</h4>
+                        <p data-i18n="about_extra1_desc">Taught foundational and advanced video editing techniques to
+                            students.</p>
                     </div>
-                    <div class="project-content">
-                        <p data-i18n="proj2_desc">Played a pivotal role in a major project, delivering visually engaging
-                            content that aligned with the company’s vision and goals.</p>
-                    </div>
-                </div>
-                <div class="project-card glass-panel group">
-                    <div class="project-overlay">
-                        <h3 data-i18n="proj3_title">SQUARE RYS</h3>
-                    </div>
-                    <div class="project-content">
-                        <p data-i18n="proj3_desc">Played a pivotal role in a major project, delivering visually engaging
-                            content that aligned with the company’s vision and goals.</p>
+                    <div class="activity">
+                        <h4 data-i18n="about_extra2_role">Head of Media <span class="highlight">– Megateam</span></h4>
+                        <p data-i18n="about_extra2_desc">Led the media department, directed a team to deliver
+                            high-quality content on tight deadlines.</p>
                     </div>
                 </div>
             </div>
