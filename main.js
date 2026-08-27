@@ -300,7 +300,7 @@ const translations = {
 
 // --- Videography profile updates ---
 // Kept here so the new profile details work even when the static HTML is cached.
-document.addEventListener('DOMContentLoaded', () => {
+const applyVideographyProfileUpdates = () => {
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
         metaDescription.setAttribute('content', 'Hussein Mohamed - Video Editor, Motion Designer & Videographer Portfolio');
@@ -337,4 +337,7 @@ document.addEventListener('DOMContentLoaded', () => {
             '<p>Currently working at Zikola Marketing, creating and editing video content from production to final delivery.</p>';
         firstActivity.parentNode.insertBefore(experience, firstActivity);
     }
-});
+};
+
+applyVideographyProfileUpdates();
+document.addEventListener('DOMContentLoaded', applyVideographyProfileUpdates);
