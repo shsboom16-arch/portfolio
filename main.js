@@ -296,3 +296,45 @@ const translations = {
         }, { passive: false });
     }
 })();
+
+
+// --- Videography profile updates ---
+// Kept here so the new profile details work even when the static HTML is cached.
+document.addEventListener('DOMContentLoaded', () => {
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+        metaDescription.setAttribute('content', 'Hussein Mohamed - Video Editor, Motion Designer & Videographer Portfolio');
+    }
+    document.title = 'Hussein Mohamed | Video Editor, Motion Designer & Videographer';
+
+    const role = document.querySelector('[data-i18n="hero_role"]');
+    if (role) role.innerHTML = 'Video Editor, Motion Designer <br>& Videographer';
+
+    const description = document.querySelector('[data-i18n="hero_desc"]');
+    if (description) description.textContent = 'A passionate video editor, motion designer, and videographer with a keen eye for detail and storytelling. I create visually compelling videos from the first frame to the final cut.';
+
+    const otherSkillsTitle = document.querySelector('[data-i18n="skill4_title"]');
+    const otherSkillsCard = otherSkillsTitle?.closest('.skill-card');
+    if (otherSkillsCard && !document.querySelector('[data-profile-skill="videography"]')) {
+        const videographyCard = document.createElement('div');
+        videographyCard.className = 'skill-card glass-panel hover-glow';
+        videographyCard.setAttribute('data-profile-skill', 'videography');
+        videographyCard.innerHTML =             '<div class="skill-icon"><i class="fas fa-video"></i></div>' +
+            '<h3>Videography</h3>' +
+            '<p>Camera Operation, Lighting & Video Production</p>' +
+            '<div class="skill-tags"><span>Camera Operation</span><span>Video Production</span></div>';
+        otherSkillsCard.parentNode.insertBefore(videographyCard, otherSkillsCard);
+    }
+
+    const activitiesTitle = document.querySelector('[data-i18n="about_extra_title"]');
+    if (activitiesTitle) activitiesTitle.textContent = 'Experience & Activities';
+    const firstActivity = document.querySelector('[data-i18n="about_extra1_role"]')?.closest('.activity');
+    if (firstActivity && !document.querySelector('[data-profile-experience="zikola"]')) {
+        const experience = document.createElement('div');
+        experience.className = 'activity';
+        experience.setAttribute('data-profile-experience', 'zikola');
+        experience.innerHTML =             '<h4>Video Editor & Videographer – Zikola Marketing</h4>' +
+            '<p>Currently working at Zikola Marketing, creating and editing video content from production to final delivery.</p>';
+        firstActivity.parentNode.insertBefore(experience, firstActivity);
+    }
+});
